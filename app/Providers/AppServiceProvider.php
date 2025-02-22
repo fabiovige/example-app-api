@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Auth\Notifications\ResetPassword;
+use App\Repositories\Interfaces\KidRepositoryInterface;
+use App\Repositories\KidRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -12,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(KidRepositoryInterface::class, KidRepository::class);
     }
 
     /**
