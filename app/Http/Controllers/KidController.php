@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kid;
-use App\Http\Requests\StoreKidRequest;
-use App\Http\Requests\UpdateKidRequest;
 use Illuminate\Http\Request;
 
 class KidController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
