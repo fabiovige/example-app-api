@@ -12,6 +12,7 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('kids', KidController::class);
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/verify-token', [AuthController::class, 'verifyToken'])->name('verify-token');
 });
 
 Route::get('/', function () {
